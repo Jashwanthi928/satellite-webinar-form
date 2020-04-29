@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satellite webinar form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <h2>Please fill in details</h2>
+      <form>
+        <input type="text" placeholder="Name*" name="name" required />
+        <input type="email" inputmode="email" name="email" placeholder="Email*" required />
+        <input
+          type="text"
+          name="phone"
+          pattern="^\d{10}$"
+          inputmode="tel"
+          placeholder="Phone Number*"
+          required
+        />
+        <input type="text" inputMode="text" name="stream" placeholder="Department*" required />
+        <input type="text" inputMode="text" name="college" list="colleges-datalist" placeholder="Collage Name*" required />
+        <datalist id="colleges-datalist" onclick="colleges(data)"></datalist>
+        <input type="submit" value="Submit" name="submit"/>
+             </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
