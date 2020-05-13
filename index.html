@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Satellite webinar form</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
   </head>
   <body>
     <div class="wrap">
@@ -23,7 +25,12 @@
         <input type="text" inputMode="text" name="stream" placeholder="Department*" required />
         <input type="text" inputMode="text" name="college" list="colleges-datalist" placeholder="Collage Name*" required />
         <datalist id="colleges-datalist" onclick="colleges(data)"></datalist>
-        <input type="submit" value="Submit" name="submit"/>
+       
+        <button id="button" class="button" >
+          <span class="submit">Submit</span>
+          <span class="loading"><i class="fa fa-refresh"></i></span>
+          <span class="check"><i class="fa fa-check"></i></span>
+        </button>
              </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

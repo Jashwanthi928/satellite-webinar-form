@@ -13,8 +13,7 @@
            console.log(datalist)
        $(document).ready(function() {
         // process the form
-        $('form').submit(function(event) {
-    
+        $('form').submit(function(event) {   
             // get the form data
             // there are many ways to get this data using jQuery (you can use the class or id also)
             var formData = {
@@ -24,7 +23,19 @@
                 'stream'    : $('input[name=stream]').val(),
                 'college'    : $('input[name=college]').val()
             };
-    
+    //         document.getElementById('button').onclick = function(){
+    //             document.getElementsByClassName('button')[0].classList.toggle("active");
+    //        } 
+    //        document.getElementById('button').transitionend = function(){
+    //         document.getElementsByClassName('button')[0].classList.toggle("finished");
+    //    } 
+    $('#button').click(function(){
+        document.getElementsByClassName('button')[0].classList.toggle("active");
+        document.getElementById('button').transitionend = function(){
+            document.getElementsByClassName('button')[0].classList.toggle("finished");
+       } 
+   });
+       $('#button').trigger('click');
             // process the form
             $.ajax({
                 type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
@@ -35,7 +46,7 @@
             })
 
                 // using the done promise callback
-                .done(function(college_data) {
+                .done(function(college_data) {  
                     // log data to the console so we can see
                     console.log(JSON.stringify(college_data.user.college)); 
                     console.log(data);
