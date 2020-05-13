@@ -42,3 +42,7 @@ input[type=submit]{
     border-radius: 20px;
     color: #fff;
 }
+input[type=submit]:hover{
+    background: rgb(2, 8, 95);
+    cursor: pointer;
+}
