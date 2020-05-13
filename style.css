@@ -107,7 +107,7 @@ button:hover{
   }
   .active:before {
     width: 100%;
-    transition: width 10s linear;
+    transition: width 15s linear;
   }
   .active span:nth-of-type(1) {
     top: -100%;
