@@ -37,10 +37,10 @@
                 // using the done promise callback
                 .done(function(college_data) {
                     // log data to the console so we can see
-                    console.log(JSON.stringify(college_data.college)); 
+                    console.log(JSON.stringify(college_data.user.college)); 
                     console.log(data);
                    function checkindex(college){
-                       return college==college_data.college;
+                       return college==college_data.user.college;
                    }
                    var index=data.findIndex(checkindex);
                     location.href = datalist[index]
