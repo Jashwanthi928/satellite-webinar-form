@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     
   </head>
-  <body>
-    <div class="wrap">
+  <body id="body">
+    <div id="wrap">
       <h2>Please fill in details</h2>
       <form>
         <input type="text" placeholder="Name*" name="name" required />
@@ -25,6 +25,7 @@
         <input type="text" inputMode="text" name="stream" placeholder="Department*" required />
         <input type="text" inputMode="text" name="college" list="colleges-datalist" placeholder="Collage Name*" required />
         <datalist id="colleges-datalist" onclick="colleges(data)"></datalist>
+        <div class="note">*Please select college only from the given list</div>
        
         <button id="button" class="button" >
           <span class="submit">Submit</span>
@@ -33,6 +34,7 @@
         </button>
              </form>
     </div>
+    <div id="error_message">Sorry! The selected college does not have webinar session</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./script.js"></script>
   </body>
